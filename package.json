@@ -1,0 +1,16 @@
+{
+  "name": "air_quality_monitoring_system",
+  "version": "1.0.0",
+  "description": "This is an monitoring system that helps to detect air temperature ,humidity and gas quality using different sensor and then using esp8266 sends it to backend server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "mongodb": "^6.5.0"
+  }
+}
