@@ -7,3 +7,5 @@ style="height:100px;">
 
 <p>the data hits our backend server once there is data for a day we send the mail to registered customers about the air quality.</p>
 
+<h2 style="color:rgb(240,0,0);">Work in progress..</h2>
+
