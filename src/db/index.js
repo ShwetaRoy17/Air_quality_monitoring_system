@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-
-
 const connectDB = async()=>{
     try{
         const connectionInstance = await mongoose.connect(
@@ -18,3 +16,6 @@ const connectDB = async()=>{
     }
 }
 export default connectDB;
+
+
+// or http://127.0.0.1:8888/?token=087f28fcfde5bb04dce1449948f8ff8b567e6362e865cdc2
