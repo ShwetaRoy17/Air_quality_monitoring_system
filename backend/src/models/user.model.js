@@ -26,6 +26,6 @@ const userSchema = new Schema({
         required:[true,"User must be a resident of this colony"]
     },
 
-})
+},{timestamps:true})
 
 export const user = mongoose.model('User',userSchema);
