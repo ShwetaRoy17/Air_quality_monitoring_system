@@ -1,12 +1,15 @@
 import express from "express";
 import cors from 'cors';
-
+import http from 'http'
+import { Server  }  from 'socket.io'
 
 const app = express();
 
+
+
 app.use(cors({
     origin:process.env.CORS_ORIGIN,
-    credentials:true
+    // credentials:true
 }))
 
 app.use(express.json({limit:"16kb"}))
@@ -17,7 +20,18 @@ import userRouter from './routes/index.routes.js'
 
 app.use("/api/v1/airquality",userRouter)
 
-export default app;
+const server = http.createServer(app);
+const io = new Server(server);
+
+io.on('connection', (socket) => {
+    console.log('Frontend connected');
+    
+    socket.on('disconnect', () => {
+      console.log('Frontend disconnected');
+    });
+  });
+export default server;
+export {io};
 
 
 

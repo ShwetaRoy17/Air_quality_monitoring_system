@@ -6,12 +6,12 @@ const router = Router();
 router.route("")
 .get((req,res)=>{ res.json(
     { 
-        number: "humidity", 
+        number: "humidity",
         temperature: 'John', 
         gas: '100'
       }
 )})
-.post(postdata)
+router.route("/data").post(postdata)
 router.route("/register").post(registerUser);
 
 export default router;

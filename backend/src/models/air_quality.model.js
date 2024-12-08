@@ -5,10 +5,6 @@ const sensorSchema = new Schema({
         type:Date,
         required:true
     },
-    timeSlot:{
-        type:String,
-        required:true,
-    },
     temperature:{
         type:Number,
         required:[true,"Must provide with temperature"]
